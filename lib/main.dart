@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 
+/*
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -31,10 +32,10 @@ Future<void> main() async {
 
 
 }
+*/
 
 
 
-/*
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -45,4 +46,4 @@ class MyApp extends StatelessWidget {
       home: Wrapper(),
     );
   }
-}*/
+}
