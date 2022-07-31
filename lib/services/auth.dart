@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 class AuthService {
 
-  late FirebaseAuth _auth;
+  var _auth = null;
 
   Future init() async{
     await Firebase.initializeApp(
@@ -14,13 +14,18 @@ class AuthService {
         projectId: "fire-b2d77",
       )
     );
-    _auth = FirebaseAuth.instance;
+
   }
 
   // sign in anon
   Future signInAnon() async {
     try {
-      await init();
+      if (Firebase.apps.length == 0) {
+        await init();
+      }
+      if(_auth==null){
+        _auth = FirebaseAuth.instance;
+      }
       UserCredential result = await _auth.signInAnonymously();
       User? user = result.user;
       return user;
