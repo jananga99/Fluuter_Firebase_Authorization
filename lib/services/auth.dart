@@ -1,34 +1,32 @@
+import 'package:fire/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 class AuthService {
 
-  var _auth = null;
+  //var _auth = null;
 
-  Future init() async{
-    await Firebase.initializeApp(
-        options: FirebaseOptions(
-        apiKey: "AIzaSyBNfB0FnpzZZ_wLUPkgcZUqZxuBeoj_i4A ",
-        appId: "1:936133268937:android:f26fed9b21d0236aa3c418",
-        messagingSenderId: "936133268937",
-        projectId: "fire-b2d77",
-      )
-    );
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
+
+  // create user obj based on firebase user
+  User1? _userFromFirebaseUser(User? user) {
+    return user != null ? User1(uid: user.uid) : null;
+  }
+
+  // auth change user stream
+  Stream<User1?> get user {
+    return _auth.authStateChanges()
+    //.map((FirebaseUser user) => _userFromFirebaseUser(user));
+        .map(_userFromFirebaseUser);
   }
 
   // sign in anon
   Future signInAnon() async {
     try {
-      if (Firebase.apps.length == 0) {
-        await init();
-      }
-      if(_auth==null){
-        _auth = FirebaseAuth.instance;
-      }
       UserCredential result = await _auth.signInAnonymously();
       User? user = result.user;
-      return user;
+      return _userFromFirebaseUser(user!);
     } catch (e) {
       print(e.toString());
       return null;
