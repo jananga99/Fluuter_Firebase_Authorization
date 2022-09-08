@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "936133268937",
-    "project_id": "fire-b2d77",
-    "storage_bucket": "fire-b2d77.appspot.com"
+    "project_number": "709216800447",
+    "project_id": "fire-fdde8",
+    "storage_bucket": "fire-fdde8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:936133268937:android:f26fed9b21d0236aa3c418",
+        "mobilesdk_app_id": "1:709216800447:android:96f5a8e754e2322884000a",
         "android_client_info": {
           "package_name": "com.soilder.fire"
         }
       },
       "oauth_client": [
         {
-          "client_id": "936133268937-36nrj9dplb1chgkr32muc9k0dc1cvtns.apps.googleusercontent.com",
+          "client_id": "709216800447-vsc82o1hjtq0tuonl5gc6dmhl4vct4oo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNfB0FnpzZZ_wLUPkgcZUqZxuBeoj_i4A"
+          "current_key": "AIzaSyCQhJpMNtUwjgStoa1yGZST8fR2keWKBBA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "936133268937-36nrj9dplb1chgkr32muc9k0dc1cvtns.apps.googleusercontent.com",
+              "client_id": "709216800447-vsc82o1hjtq0tuonl5gc6dmhl4vct4oo.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
